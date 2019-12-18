@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="fournisseur-jpa" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="client-jpa" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://bssfeveqoxjcx2plc0lr-mysql.services.clever-cloud.com:3306/bssfeveqoxjcx2plc0lr" />
