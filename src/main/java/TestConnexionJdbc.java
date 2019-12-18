@@ -14,6 +14,7 @@ public class TestConnexionJdbc {
 		Region r= em.find(Region.class, 76);
 		System.out.println(r.getNom());
 		em.close();
+	
 	}
 
 }
