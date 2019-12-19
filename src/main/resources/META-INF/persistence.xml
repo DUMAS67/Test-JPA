@@ -2,14 +2,43 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="client-jpa" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="client-jpa-cloud"
+		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://bssfeveqoxjcx2plc0lr-mysql.services.clever-cloud.com:3306/bssfeveqoxjcx2plc0lr" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mariadb://bssfeveqoxjcx2plc0lr-mysql.services.clever-cloud.com:3306/bssfeveqoxjcx2plc0lr" />
 			<property name="javax.persistence.jdbc.user" value="u62ktagdxswnv1uk" />
 			<property name="javax.persistence.jdbc.password" value="0ZB5W9ESwCMAS2FLIrXq" />
 			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
 			<property name="hibernate.show_sql" value="false" />
 		</properties>
+
+	</persistence-unit>
+	<persistence-unit name="client-jpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>fr.diginamic.banque.entites.Banque</class>
+		<class>fr.diginamic.banque.entites.Client</class>
+		<class>fr.diginamic.banque.entites.Compte</class>
+		<class>fr.diginamic.banque.entites.LivretA</class>
+		<class>fr.diginamic.banque.entites.Operation</class>
+		<class>fr.diginamic.banque.entites.Adresse</class>
+		<class>fr.diginamic.banque.entites.AssuranceVie</class>
+		<class>fr.diginamic.banque.entites.Virement</class>
+		<properties>
+			<!-- desactiver l'autodetection des classes de type @Entity -->
+			<property name="hibernate.archive.autodetection" value="" />
+			<!-- Drop and create à chaque redémarrage -->
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/BANQUE" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+
 	</persistence-unit>
 </persistence> 
+
