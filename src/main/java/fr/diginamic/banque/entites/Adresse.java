@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 /**
  * @author Stagiaire
- *
+ *Classe qui définit les relations et attributs de la table Adresse
  */
 @Embeddable 
 

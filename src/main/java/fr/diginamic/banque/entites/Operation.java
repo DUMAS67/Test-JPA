@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 /**
  * @author Stagiaire
- *
+ *Classe qui définit les relations et attributs de la table OPERATION
  */
 @Entity
 @Table(name="OPERATION")

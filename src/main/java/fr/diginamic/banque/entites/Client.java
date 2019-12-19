@@ -20,7 +20,7 @@ import javax.persistence.Table;
 
 /**
  * @author Stagiaire
- *
+ *Classe qui définit les relations et attributs de la table CLIENT
  */
 @Entity
 @Table(name= "CLIENT")

@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 /**
  * @author Stagiaire
- *
+ *Classe qui définit les relations et attributs de la table COMPTE
  */
 @Entity
 @Table(name="COMPTE")
