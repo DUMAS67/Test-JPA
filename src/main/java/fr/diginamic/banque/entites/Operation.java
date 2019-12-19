@@ -8,23 +8,25 @@ import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 /**
  * @author Stagiaire
  *Classe qui définit les relations et attributs de la table OPERATION
  */
 @Entity
-@Table(name="OPERATION")
-public class Operation {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class  Operation {
+	
 	
 	/* ID de la Table OPERATION */
 	@Id
 	private int id;
 	/* Colonne DATE de la Table OPERATION */
-	@Column(name="DATE")
+	@Column(name ="DATE")
 	private LocalDateTime date;
 	/* Colonne MONTANT de la Table OPERATION */
 	@Column(name="MONTANT")

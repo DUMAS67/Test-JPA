@@ -23,7 +23,8 @@
 		<class>fr.diginamic.banque.entites.Compte</class>
 		<class>fr.diginamic.banque.entites.LivretA</class>
 		<class>fr.diginamic.banque.entites.Operation</class>
-		<class>fr.diginamic.banque.entites.Adresse</class>
+		<!-- Drop and create à chaque redémarrage 
+		<class>fr.diginamic.banque.entites.Adresse</class>-->
 		<class>fr.diginamic.banque.entites.AssuranceVie</class>
 		<class>fr.diginamic.banque.entites.Virement</class>
 		<properties>

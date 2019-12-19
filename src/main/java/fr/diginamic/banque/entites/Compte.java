@@ -8,23 +8,28 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
 /**
  * @author Stagiaire
  *Classe qui définit les relations et attributs de la table COMPTE
  */
 @Entity
-@Table(name="COMPTE")
-public class Compte {
+@Inheritance(strategy = InheritanceType.JOINED)
+
+public abstract class Compte {
 	
 	/* Id de la table COMPTE */
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	/* Colonne NUMERO de la table COMPTE */
 	@Column(name="NUMERO")

@@ -5,7 +5,6 @@ package fr.diginamic.banque.entites;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Id;
 
 /**
  * @author Stagiaire
@@ -15,9 +14,8 @@ import javax.persistence.Id;
 
 public class Adresse {
 	
-	/* ID de la table ADRESSE */
-	@Id
-	private int id;
+
+	
 	/* Colonne NUMERO de la table ADRESSE */
 	@Column(name="NUMERO")
 	private int numero;
@@ -36,21 +34,6 @@ public class Adresse {
 		super();
 	}
 
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
 
 
 	/**
